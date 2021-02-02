@@ -1,0 +1,305 @@
+/*config global ================================*/
+:root{
+    --dark-blue:#363f5f;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f0f2f5;
+    font-family: 'poppins', sans-serif;
+}
+
+h2{
+    color: var(--dark-blue);
+}
+
+html {
+    font-size: 93.75%;
+}
+
+/*Links e botões================================*/
+
+a {
+    color: #3dd705;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #32CD32;
+}
+
+.button.new{
+    display: inline-block;
+    margin-bottom: .8rem;
+}
+
+
+/*Header ================================*/
+header{
+    background-color: #006400 ;
+    padding: 2rem 0 15rem 0;
+    text-align: center;
+}
+
+header h1 {
+    
+    color: #fff;
+    font-weight: 200;
+}
+/*Conteiner ================================*/
+
+#conteiner{
+    margin: auto;
+    width: min(50vw, 800px) ;
+    margin-top: -7rem;
+}
+
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/*Cartões de valores ================================*/
+.cards{
+    background-color:#fff;
+    padding: 1.5rem 2rem;
+    border-radius: 0.5rem 0 0 0.5rem;
+    margin-bottom: 2rem;
+
+    color: var(--dark-blue);
+
+}
+.cards h2{
+
+    font-size: 1rem;
+    font-weight: 400;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.cards p {
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: 400;
+}
+
+#total{
+    background-color: #32CD32;
+    padding: 1.5rem 2rem;
+    border-radius: 0.5rem 0 0 0.5rem;
+    margin-bottom: 2rem;
+
+
+}
+
+
+#total h2 {
+    color: #fff;
+    font-weight: 400;
+    font-size: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#total p {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 3rem;
+}
+
+/*Table ================================*/
+#table-conteiner{
+    display: block;
+    overflow-x: auto;
+}
+
+table {
+
+    width: 100%;
+    text-align: justify;
+    border-spacing: 0 0.5rem;
+    
+
+}
+
+
+table th{
+    background-color: #fff;
+    font-weight: 700;
+    color: #969cb3;
+    padding: 1rem 2rem;
+}
+table tr{
+    border-radius: 0.5rem 0 0 0.5rem;
+    opacity: 0.7;
+}
+
+table td {
+    background-color: #fff;
+    height: 4rem;
+    padding: 1rem 2rem;
+    
+}
+
+tr:hover{
+    opacity: 1;
+}
+
+.gastos{
+    color: red;
+}
+
+.lucro {
+    color: #32CD32;
+}
+
+.descrição{
+    color: black;
+    font-weight: 700;
+}
+
+/*Modal ================================*/
+
+.modal-overlay{
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    position: fixed;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+
+}
+
+.modal-overlay.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal{
+    background-color: #f0f2f5;
+    padding: 2.4rem;
+}
+
+
+/*Footer ================================*/
+
+footer{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 200;
+    padding-top: 6rem;
+    color: #006400;
+}
+
+/*Responsivo ================================*/
+
+@media (min-width:800px) {
+    html{
+        font-size: 87.5%;
+    }
+
+    #balance{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+        
+    }
+    
+    
+   
+
+}
+
+
+/*Formulário ================================*/
+
+#form {
+   max-width: 500px;
+}
+
+#form h2{
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+.input-group{
+    margin: 0.8rem 0;
+
+}
+.input-group input {
+    width: 100%;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.input-group .help {
+    opacity: 0.7;
+}
+
+.input-group.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-group.actions button,
+.input-group.actions .button {
+    width: 48%;
+    padding: 0.5rem 2rem;
+    margin-top: 1rem;
+}
+.input-group.actions .button.cancel {
+    background-color: #fff;
+    color: red;
+    border: red 2px solid;
+    text-align: center;
+    padding: 1.2rem 0.8rem;
+
+    opacity: 0.6;
+}
+
+.input-group.actions .button.cancel:hover{
+    opacity: 1;
+}
+
+.input-group.actions button {
+    background-color: #32CD32;
+    color: #fff;
+    border: none;
+    padding: 1.5rem 0.8rem;
+    cursor: pointer;
+}
+
+.input-group.actions button:hover{
+    background-color: #3dd705;
+}
+
+.help {
+    display: block;
+}
